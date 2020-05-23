@@ -1,13 +1,20 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/author/author"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "RogerBlog",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "borderStyle":"black",
+    "list":[
+      {"text": "首页", "pagePath": "pages/index/index"},
+      {"text": "作者", "pagePath": "pages/author/author"}
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
