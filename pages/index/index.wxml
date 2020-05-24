@@ -1,4 +1,35 @@
 <!--index.wxml-->
-<view>
-  这里是主页
+<view class="index">
+	<view class="indexContainer">
+		<view class="blogItem" wx:for="{{blogList}}" wx:key="id">
+			<view class="blogContent">
+				<view class="blogTitle">{{item.articleTitle}}</view>
+				<view class="blogMeta">
+					<span wx:if="{{item.category}}">
+						<i class="el-icon-folder"></i>
+						{{item.category.name}}
+					</span>
+					<span wx:else>
+						<i class="el-icon-folder"></i>
+						未分类
+					</span>
+					<span>
+						<i class="el-icon-date"></i>
+						{{item.articleDate}}
+					</span>
+					<span>
+						<i class="el-icon-s-custom"></i> 1230人
+					</span>
+				</view>
+        <view class="blogCover">
+         <img src="http://www.clownz.xyz:8220/api/file/97bb3c7c-3176-4707-bc95-b5edc4c23d5c-git.png" alt="cover"  />
+        </view>
+        <view class="blogAbstract">
+        {{item.articleAbstract}}
+        </view>
+			</view>
+			<view class="blogGo">
+      </view>
+		</view>
+	</view>
 </view>

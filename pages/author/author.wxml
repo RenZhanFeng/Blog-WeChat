@@ -1,2 +1,2 @@
 <!--pages/author/author.wxml-->
-<text>这里是作者介绍</text>
+<view class="author">这里是作者介绍</view>

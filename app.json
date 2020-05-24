@@ -1,21 +1,32 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/author/author"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "RogerBlog",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
-  "tabBar":{
-    "borderStyle":"black",
-    "list":[
-      {"text": "首页", "pagePath": "pages/index/index"},
-      {"text": "作者", "pagePath": "pages/author/author"}
+  "tabBar": {
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [{
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath":"images/index_default.png",
+        "selectedIconPath":"images/index_active.png"
+      },
+      {
+        "text": "作者",
+        "pagePath": "pages/author/author",
+        "iconPath":"images/index_default.png",
+        "selectedIconPath":"images/index_active.png"
+      }
     ]
   },
+  "usingComponents": {},
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

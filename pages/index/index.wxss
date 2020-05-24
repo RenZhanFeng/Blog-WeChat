@@ -1,1 +1,51 @@
 /**index.wxss**/
+
+.indexContainer {
+  margin: 10px 10px;
+}
+
+.blogItem {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .05);
+}
+
+.blogTitle {
+  color: #000;
+  font-size: 20px;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.blogTitle:hover {
+  color: #1e90ff;
+}
+
+.blogMeta {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #ccc;
+  font-size: 13px;
+}
+
+.blogMeta span {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.list-cover img{
+  width: 100%;
+  display: block;
+  margin: 8px auto;
+  object-fit: cover;
+}
+
+.blogAbstract{
+  font-size: 15px;
+  color: #999;
+  line-height: 20px;
+}
