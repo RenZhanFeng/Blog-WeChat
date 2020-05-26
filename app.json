@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/blogDetails/blogDetails",
     "pages/author/author"
   ],
   "window": {

@@ -1,24 +1,24 @@
 <!--index.wxml-->
 <view class="index">
 	<view class="indexContainer">
-		<view class="blogItem" wx:for="{{blogList}}" wx:key="id">
+		<view class="blogItem" wx:for="{{blogList}}" wx:key="id" data-item ="{{item}}" bindtap="goDetails">
 			<view class="blogContent">
 				<view class="blogTitle">{{item.articleTitle}}</view>
 				<view class="blogMeta">
 					<span wx:if="{{item.category}}">
-						<i class="el-icon-folder"></i>
+						<i class="iconfont icon-folder_icon"></i>
 						{{item.category.name}}
 					</span>
 					<span wx:else>
-						<i class="el-icon-folder"></i>
+						<i class="iconfont icon-folder_icon"></i>
 						未分类
 					</span>
 					<span>
-						<i class="el-icon-date"></i>
+						<i class="iconfont icon-rili"></i>
 						{{item.articleDate}}
 					</span>
 					<span>
-						<i class="el-icon-s-custom"></i> 1230人
+						<i class="iconfont icon-ren"></i> 1230人
 					</span>
 				</view>
         <view class="blogCover">
