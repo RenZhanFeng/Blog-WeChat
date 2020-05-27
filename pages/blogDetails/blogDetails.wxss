@@ -1,1 +1,32 @@
 /* pages/blogDetails/blogDetails.wxss */
+.blogDetails {
+  padding: 20px 0;
+  margin: 10px 15px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .05);
+}
+
+.articleTitle {
+  font-size: 20px;
+  text-align: center;
+  color: #000000a6;
+  font-weight: 600;
+  margin: 15px 0;
+}
+
+.list-meta {
+  padding: 10px 20px;
+  color: #ccc;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.list-meta span {
+  padding-right: 10px;
+}
+
+.markdown-body image {
+  width: 100%;
+  margin: 8px auto;
+}

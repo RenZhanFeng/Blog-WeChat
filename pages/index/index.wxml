@@ -1,5 +1,22 @@
 <!--index.wxml-->
 <view class="index">
+<view class="swiper-tab">
+      <view class="tab-item {{currentTab == 0? 'on' : ''}}" data-current="0" bindtap="swichNav">全部</view>
+      <view 
+				class="tab-item {{currentTab == 1? 'on' : ''}}" 
+				data-current="1" 
+				bindtap="swichNav" 
+				wx:for = "{{categories}}" 
+				wx:key="{{item.sort}}"
+				>Tab1</view>
+      <view class="tab-item {{currentTab == 2? 'on' : ''}}" data-current="2" bindtap="swichNav">Tab2</view>
+</view>
+<swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange">
+      <swiper-item><view>我是tab0</view></swiper-item>
+      <swiper-item><view>我是tab1</view></swiper-item>
+      <swiper-item><view>我是tab2</view></swiper-item>
+</swiper>
+
 	<view class="indexContainer">
 		<view class="blogItem" wx:for="{{blogList}}" wx:key="id" data-item ="{{item}}" bindtap="goDetails">
 			<view class="blogContent">
@@ -21,8 +38,8 @@
 						<i class="iconfont icon-ren"></i> 1230人
 					</span>
 				</view>
-        <view class="blogCover">
-         <img src="http://www.clownz.xyz:8220/api/file/97bb3c7c-3176-4707-bc95-b5edc4c23d5c-git.png" alt="cover"  />
+        <view class="blogCover" wx:if="{{item.articleCover}}">
+         <image src="{{item.articleCover}}" alt="cover" mode="widthFix"/>
         </view>
         <view class="blogAbstract">
         {{item.articleAbstract}}

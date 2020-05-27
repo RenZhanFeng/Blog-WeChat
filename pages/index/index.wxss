@@ -37,7 +37,6 @@
 }
 
 .blogMeta span {
-  padding-left: 10px;
   padding-right: 10px;
 }
 
@@ -52,4 +51,21 @@
   font-size: 15px;
   color: #999;
   line-height: 20px;
+}
+
+.blogCover image{
+  width: 100%;
+  margin: 8px auto;
+}
+
+.swiper-tab{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  line-height: 80rpx;
+  background: white;
+}
+.on {
+  color: blue;
+  border-bottom: 5rpx solid blue;
 }

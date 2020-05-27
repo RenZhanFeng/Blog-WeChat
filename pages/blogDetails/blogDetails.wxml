@@ -1,2 +1,23 @@
 <!--pages/blogDetails/blogDetails.wxml-->
-<view>{{article.articleTitle}}</view>
+<view class="blogDetails">
+  <view class="articleTitle">{{article.articleTitle}}</view>
+
+  	<view class="list-meta">
+			<span wx:if="{{article.category}}">
+				<i class="iconfont icon-folder_icon"></i> {{article.category.name}}
+			</span>
+			<span wx:else>
+				<i class="iconfont icon-folder_icon"></i> 未分类
+			</span>
+			<span>
+						<i class="iconfont icon-rili"></i> {{article.articleDate}}
+			</span>
+			<span><i class="iconfont icon-ren"></i> 1230人</span>
+		</view>
+
+    <view class="markdown-body">
+      <image src="{{article.articleCover}}" alt="cover" wx:if="{{article.articleCover}}" mode="widthFix"/>
+      <view wx:if="{{isLoading}}">加载中...</view>
+      <towxml nodes="{{articleContents}}"/>
+    </view> 
+</view>
