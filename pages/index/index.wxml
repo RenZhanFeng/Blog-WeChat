@@ -1,52 +1,48 @@
 <!--index.wxml-->
 <view class="index">
-<view class="swiper-tab">
-      <view class="tab-item {{currentTab == 0? 'on' : ''}}" data-current="0" bindtap="swichNav">全部</view>
-      <view 
-				class="tab-item {{currentTab == 1? 'on' : ''}}" 
-				data-current="1" 
-				bindtap="swichNav" 
-				wx:for = "{{categories}}" 
-				wx:key="{{item.sort}}"
-				>Tab1</view>
-      <view class="tab-item {{currentTab == 2? 'on' : ''}}" data-current="2" bindtap="swichNav">Tab2</view>
-</view>
-<swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange">
-      <swiper-item><view>我是tab0</view></swiper-item>
-      <swiper-item><view>我是tab1</view></swiper-item>
-      <swiper-item><view>我是tab2</view></swiper-item>
-</swiper>
-
-	<view class="indexContainer">
-		<view class="blogItem" wx:for="{{blogList}}" wx:key="id" data-item ="{{item}}" bindtap="goDetails">
-			<view class="blogContent">
-				<view class="blogTitle">{{item.articleTitle}}</view>
-				<view class="blogMeta">
-					<span wx:if="{{item.category}}">
-						<i class="iconfont icon-folder_icon"></i>
-						{{item.category.name}}
-					</span>
-					<span wx:else>
-						<i class="iconfont icon-folder_icon"></i>
-						未分类
-					</span>
-					<span>
-						<i class="iconfont icon-rili"></i>
-						{{item.articleDate}}
-					</span>
-					<span>
-						<i class="iconfont icon-ren"></i> 1230人
-					</span>
-				</view>
-        <view class="blogCover" wx:if="{{item.articleCover}}">
-         <image src="{{item.articleCover}}" alt="cover" mode="widthFix"/>
-        </view>
-        <view class="blogAbstract">
-        {{item.articleAbstract}}
-        </view>
-			</view>
-			<view class="blogGo">
-      </view>
-		</view>
+	<view class="swiper-tab">
+		<view class="tab-item {{currentTab == item.sort? 'on' : ''}}" data-current="{{item.sort}}" data-id="{{item.id}}" bindtap="swichNav" wx:for="{{categories}}" wx:key="id">{{item.name}}</view>
 	</view>
+	<swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange">
+		<swiper-item wx:for="{{categories}}" wx:key="id">
+			<scroll-view scroll-y="true">
+				<view class="indexContainer">
+				<view wx:if="{{blogList.length == 0}}">很抱歉，暂时无相关文章</view>
+				 <view wx:if="{{isLoading}}">加载中...</view>
+					<view class="blogItem" wx:for="{{blogList}}" wx:key="id" data-item="{{item}}" bindtap="goDetails">
+						<view class="blogContent">
+							<view class="blogTitle">{{item.articleTitle}}</view>
+							<view class="blogMeta">
+								<span wx:if="{{item.category}}">
+									<i class="iconfont icon-folder_icon"></i>
+									{{item.category.name}}
+								</span>
+								<span wx:else>
+									<i class="iconfont icon-folder_icon"></i>
+									未分类
+								</span>
+								<span>
+									<i class="iconfont icon-rili"></i>
+									{{item.articleDate}}
+								</span>
+								<span>
+									<i class="iconfont icon-ren"></i> 1230人
+								</span>
+							</view>
+							<view class="blogCover" wx:if="{{item.articleCover}}">
+								<image src="{{item.articleCover}}" alt="cover" mode="widthFix" />
+							</view>
+							<view class="blogAbstract">
+								{{item.articleAbstract}}
+							</view>
+						</view>
+						<view class="blogGo">
+						</view>
+					</view>
+				</view>
+			</scroll-view>
+		</swiper-item>
+	</swiper>
+
+
 </view>

@@ -4,6 +4,7 @@ App({
   towxml:require('/towxml/index'),
   onLaunch: function () {},
   globalData: {
-    userInfo: null
+    userInfo: null,
+    APIURL:"http://clownz.xyz:8443/api/"
   }
 })
