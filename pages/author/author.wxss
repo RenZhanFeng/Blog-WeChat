@@ -1,1 +1,96 @@
 /* pages/author/author.wxss */
+.author {
+  margin: 10px 15px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.author view {
+  margin-bottom: 15px;
+}
+
+.user-icon {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #c7c4c4;
+}
+
+.user-icon image {
+  width: 100%;
+  height: 100%;
+}
+
+.user-introduction {
+  text-align: center;
+  color: #999;
+}
+
+.user-name {
+  font-size: 20px;
+  color: #1890ff;
+}
+
+.user-title {
+  font-size: 14px;
+}
+
+.user-statistics {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+  color: #999;
+  text-align: center;
+}
+
+.user-statistics view {
+  line-height: 22px;
+}
+
+.user-statistics view p {
+  display: block;
+  font-size: 14px;
+}
+
+.contact-icon {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.iconfont {
+  font-size: 20px;
+  color: #999;
+}
+
+.user-contact-title {
+  display: block;
+  height: 1px;
+  width: 100%;
+  margin: 24px 0;
+  background-color: #DCDFE6;
+  position: relative;
+}
+
+.user-contact-title-text {
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+  background-color: #FFF;
+  padding: 0 20px;
+  color: #303133;
+}
+
+.contact-author view {
+  border-bottom: 1px dashed#999;
+  color: #999;
+  font-size: 14px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}

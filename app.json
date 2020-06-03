@@ -1,8 +1,9 @@
 {
   "pages": [
+    "pages/author/author",
     "pages/index/index",
-    "pages/blogDetails/blogDetails",
-    "pages/author/author"
+    "pages/blogDetails/blogDetails"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
