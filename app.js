@@ -5,6 +5,6 @@ App({
   onLaunch: function () {},
   globalData: {
     userInfo: null,
-    APIURL:"http://clownz.xyz:8443/api/"
+    APIURL:"https://www.clownz.xyz/api/"
   }
 })
