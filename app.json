@@ -22,8 +22,8 @@
       {
         "text": "作者",
         "pagePath": "pages/author/author",
-        "iconPath":"images/index_default.png",
-        "selectedIconPath":"images/index_active.png"
+        "iconPath":"images/author_default.png",
+        "selectedIconPath":"images/autho_activer.png"
       }
     ]
   },

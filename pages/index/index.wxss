@@ -61,9 +61,14 @@
 .swiper-tab {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   line-height: 80rpx;
   background: white;
+  white-space: nowrap;
+}
+.tab-item{
+  display: inline-block;
+  width: 20%;
+  text-align: center;
 }
 
 .swiper {
